@@ -420,6 +420,10 @@ LoaderManager.LoaderCallbacks<Cursor> {
 	ImageView plusImage;
 
 	boolean sign = false;
+	
+	int pathItemWidth = 58;
+	
+	int squarelength = pathItemWidth * 4;
 
 	static final int anicatinoTime = 100;
 
@@ -445,7 +449,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			ViewPropertyAnimator animate = editFeed.animate();
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1 + 240);
-			animate.translationXBy(-200).translationYBy(0).start();
+			animate.translationXBy(-squarelength).translationYBy(0).start();
 		}
 
 		{
@@ -453,7 +457,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1 + 180);
 			animate.setStartDelay(20);
-			animate.translationXBy(-190).translationYBy(-60).start();
+			animate.translationXBy(-squarelength).translationYBy(-squarelength/3).start();
 		}
 
 		{
@@ -461,7 +465,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1 + 120);
 			animate.setStartDelay(40);
-			animate.translationXBy(-170).translationYBy(-120).start();
+			animate.translationXBy(-squarelength + pathItemWidth/3).translationYBy(-squarelength*2/3).start();
 		}
 
 		{
@@ -469,7 +473,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1 + 80);
 			animate.setStartDelay(60);
-			animate.translationXBy(-120).translationYBy(-165).start();
+			animate.translationXBy(-squarelength*2/3).translationYBy(-squarelength + pathItemWidth/3).start();
 		}
 
 		{
@@ -477,7 +481,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1 + 40);
 			animate.setStartDelay(80);
-			animate.translationXBy(-60).translationYBy(-190).start();
+			animate.translationXBy(-squarelength/3).translationYBy(-squarelength).start();
 		}
 
 		{
@@ -485,7 +489,7 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			animate.setInterpolator(new OvershootInterpolator());
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(100);
-			animate.translationXBy(0).translationYBy(-200).start();
+			animate.translationXBy(0).translationYBy(-squarelength).start();
 		}
 	}
 
@@ -494,42 +498,42 @@ LoaderManager.LoaderCallbacks<Cursor> {
 		{
 			ViewPropertyAnimator animate = editFeed.animate();
 			animate.setDuration(anicatinoTime * 1);
-			animate.translationXBy(200).translationYBy(0).start();
+			animate.translationXBy(squarelength).translationYBy(0).start();
 		}
 
 		{
 			ViewPropertyAnimator animate = refreshAll.animate();
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(30);
-			animate.translationXBy(190).translationYBy(60).start();
+			animate.translationXBy(squarelength).translationYBy(squarelength/3).start();
 		}
 
 		{
 			ViewPropertyAnimator animate = setting.animate();
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(60);
-			animate.translationXBy(170).translationYBy(120).start();
+			animate.translationXBy(squarelength - pathItemWidth/3).translationYBy(squarelength*2/3).start();
 		}
 
 		{
 			ViewPropertyAnimator animate = feedback.animate();
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(90);
-			animate.translationXBy(120).translationYBy(165).start();
+			animate.translationXBy(squarelength*2/3).translationYBy(squarelength - pathItemWidth/3).start();
 		}
 
 		{
 			ViewPropertyAnimator animate = checkUpdate.animate();
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(120);
-			animate.translationXBy(60).translationYBy(190).start();
+			animate.translationXBy(squarelength/3).translationYBy(squarelength).start();
 		}
 
 		{
 			ViewPropertyAnimator animate = shareWithOthers.animate();
 			animate.setDuration(anicatinoTime * 1);
 			animate.setStartDelay(150);
-			animate.translationXBy(0).translationYBy(200).start();
+			animate.translationXBy(0).translationYBy(squarelength).start();
 		}
 	}
 	
