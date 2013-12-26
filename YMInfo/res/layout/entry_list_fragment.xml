@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/no_entries"
+        android:gravity="center" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="fill"
+        android:drawSelectorOnTop="false"
+        android:cacheColorHint="@android:color/transparent" />
+    
+    <TextView android:visibility="gone" android:gravity="center" android:textColor="@android:color/white" android:background="#000" android:id="@+id/statusbar" android:alpha="0.5" android:text="@string/loading" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    
+    <FrameLayout android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:layout_gravity="bottom"> 
+            
+            
+           <ImageButton android:id="@+id/picture_tiankong" 
+               android:layout_width="wrap_content" android:layout_height="wrap_content" 
+               android:background="@drawable/composer_camera" 
+               android:layout_marginRight="3dp"
+               android:layout_marginBottom="3dp"
+               android:onClick="itemClick"
+               android:layout_gravity="bottom|right"/>
+           <ImageButton android:id="@+id/music" 
+               android:layout_width="wrap_content" 
+               android:layout_marginRight="3dp"
+               android:layout_marginBottom="3dp"
+               android:onClick="itemClick"
+               android:layout_height="wrap_content" android:background="@drawable/composer_music" 
+               android:layout_gravity="bottom|right"/>
+           <ImageButton android:id="@+id/place" 
+               android:layout_width="wrap_content" 
+               android:layout_marginRight="3dp"
+               android:layout_marginBottom="3dp"
+               android:onClick="itemClick"
+               android:layout_height="wrap_content" android:background="@drawable/composer_place" 
+               android:layout_gravity="bottom|right"/>
+           <ImageButton android:id="@+id/sleep" 
+               android:layout_marginRight="3dp"
+               android:layout_marginBottom="3dp"
+               android:onClick="itemClick"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:background="@drawable/composer_sleep" android:layout_gravity="bottom|right"/>
+           <ImageButton android:id="@+id/thought" 
+               android:layout_marginRight="3dp"
+               android:onClick="itemClick"
+               android:layout_marginBottom="3dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:background="@drawable/composer_thought" android:layout_gravity="bottom|right"/>
+           <ImageButton android:id="@+id/with" 
+               android:layout_marginRight="3dp"
+               android:onClick="itemClick"
+               android:layout_marginBottom="3dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:background="@drawable/composer_with" android:layout_gravity="bottom|right"/>
+           
+           <FrameLayout android:layout_width="wrap_content" 
+               android:layout_height="wrap_content" android:clickable="true" 
+               android:onClick="myanimation" android:layout_gravity="bottom|right">
+               <ImageView android:id="@+id/friends" android:layout_width="wrap_content" 
+                   android:layout_height="wrap_content" android:src="@drawable/composer_button" />
+               <ImageView android:id="@+id/myplus" android:layout_width="wrap_content" 
+                   android:layout_height="wrap_content" android:src="@drawable/composer_icn_plus" 
+                   android:layout_gravity="center" /> 
+           </FrameLayout> 
+           
+    </FrameLayout>
+    
+</FrameLayout>

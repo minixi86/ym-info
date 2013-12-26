@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/content_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"></ViewFlipper>
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/round_background"
+        android:onClick="onClickBackBtn"
+        android:src="@drawable/navigation_back" />
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/cancelFullscreenBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_background"
+        android:onClick="onClickCancelFullscreenBtn"
+        android:src="@drawable/cancel_full_screen"
+        android:visibility="gone" />
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/forwardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_background"
+        android:onClick="onClickForwardBtn"
+        android:src="@drawable/navigation_forward" />
+
+    <RelativeLayout 
+        android:id="@+id/umenglayout"
+        android:layout_width="fill_parent"
+	    android:layout_height="40dp">
+        
+    </RelativeLayout>
+    
+    <TextView android:visibility="gone" android:layout_alignParentBottom="true" android:gravity="center" android:textColor="@android:color/white" android:background="#000" android:id="@+id/statusbar2" android:alpha="0.5" android:text="@string/loading" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright (c) 2010-2012 Stefan Handschuh
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+<resources>
+
+    <!-- GENERAL -->
+    <string name="app_name">易鸣资讯</string>
+    <string name="never">从未</string>
+    <string name="update">上次更新</string>
+    <string name="colon">:\u00A0</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_refresh">刷新</string>
+    <string name="menu_all_read">标记为以读</string>
+    <string name="yminfo_feeds">易鸣资讯</string>
+    <string name="new_entries">新文章</string>
+    <string name="error">错误</string>
+    <string name="network_error">网络无法联通</string>
+    <string name="loading">加载中</string>
+    <string name="no_result">没有此关键字的资讯</string>
+    <string name="drawer_open">打开左侧菜单</string>
+    <string name="drawer_close">关闭左侧菜单</string>
+    <string name="updatefinish">更新完毕</string>
+    <string name="logoutpromot">再按一次就退出咯</string>
+    <string name="promote">易鸣资讯，隶属www.ym910.com，收集最优质的网站资讯资源。兴趣就在掌中</string>
+    <string name="logotxt">优质资讯信息，兴趣尽在掌中</string>
+
+    <!-- FEEDS -->
+    <string name="feeds">资讯列表</string>
+    <string name="menu_add_feed">添加资讯</string>
+    <string name="no_feeds">无任何资讯</string>
+    <string name="no_filters">无过滤器</string>
+    <string name="context_menu_delete">删除</string>
+    <string name="edit_feed_title">编辑</string>
+    <string name="new_feed_title">新建</string>
+    <string name="context_menu_edit">编辑</string>
+    <string name="menu_add_group">添加组</string>
+    <string name="menu_import">从OPML导入</string>
+    <string name="menu_export">导出到OPML</string>
+    <string name="error_feed_error">资讯的地址无法访问.</string>
+    <string name="error_feed_process">资讯的地址无法被处理.</string>
+    <string name="error_feed_url_exists">地址已经存在.</string>
+    <string name="error_feed_import">选择的文章无法被导入.</string>
+    <string name="error_feed_export">导出失败，请确认可写</string>
+    <string name="error_external_storage_not_available">外部存储不可用</string>
+    <string name="feed_url">资讯地址，点右侧可搜索</string>
+    <string name="optional">(可选)</string>
+    <string name="website_or_feed">(网站地址或资讯地址(即RSS地址))</string>
+    <string name="feed_title">标题</string>
+    <string name="feed_filters">排除过滤器</string>
+    <string name="filter_add_title">添加过滤器</string>
+    <string name="filter_delete_title">删除过滤器</string>
+    <string name="filter_edit_title">编辑过滤器</string>
+    <string name="filter_is_regex">过滤器为正则表达式</string>
+    <string name="filter_apply_to_title">应用在标题</string>
+    <string name="filter_apply_to_content">应用在内容</string>
+    <string name="feed_search">资讯搜索</string>
+    <string name="feed_search_by_web_search">按关键字搜</string>
+    <string name="feed_search_by_topic">生成RSS</string>
+    <string name="feed_search_by_youtube">寻找频道</string>
+    <string name="select_file">选择文件</string>
+    <string name="question_delete_feed">确认删除这个资讯吗？</string>
+    <string name="question_delete_group">确认删除这个组以及底下的资讯吗？</string>
+    <string name="question_delete_filter">确定要删除这个过滤器?</string>
+    <string name="add_group_title">选择组名</string>
+    <string name="edit_group_title">编辑组名</string>
+    <string name="message_exported_to">导出到 %s.</string>
+    <string name="to_group_title">删除资讯</string>
+    <string name="to_group_message">你可以选择删除或者移出这个组?</string>
+    <string name="to_group_above">离开组</string>
+    <string name="to_group_into">插入这个组</string>
+
+    <!-- ENTRIES -->
+    <string name="all">所有文章</string>
+    <string name="no_entries">无文章</string>
+    <string name="favorites">赞的文章</string>
+    <string name="context_menu_hide_read">隐藏已读文章</string>
+    <string name="context_menu_show_read">显示已读文章</string>
+    <string name="context_menu_share_starred">分享赞的文章</string>
+    <string name="menu_star">赞</string>
+    <string name="menu_unstar">取消赞</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_full_screen">全屏</string>
+    <string name="menu_copy_clipboard">拷贝链接</string>
+    <string name="menu_mark_as_unread">标记为未读</string>
+    <string name="share_favorites_title">赞的文章</string>
+    <string name="copied_clipboard">拷贝链接成功</string>
+    <string name="get_full_text">获得全文内容</string>
+    <string name="original_text">显示原文</string>
+    <string name="see_enclosure">见附件</string>
+    <string name="see_link">浏览器打开</string>
+    <string name="cant_open_link">无法打开连接</string>
+    
+    <string name="onlyupdatewifi">没有wifi连接， 只在wifi下更新</string>
+	<string name="noupdate">您用的是最新版本</string>
+	<string name="updatetimeout">检查更新超时</string>
+	<string name="networkerror">网络连接异常</string>
+	<string name="homepage">首页:</string>
+    
+    <!-- WIDGET -->
+    <string name="red">红</string>
+    <string name="green">绿</string>
+    <string name="blue">蓝</string>
+    <string name="transparency">透明</string>
+
+    <!-- SETTINGS -->
+    <string name="settings_category_refresh">自动刷新</string>
+    <string name="settings_refresh_enabled">允许自动刷新</string>
+    <string name="settings_refresh_enabled_description">自动刷新文章的时间间隔
+    </string>
+    <string name="settings_refresh_interval">刷新间隔</string>
+    <string name="settings_refresh_interval_description">自动刷新的时间间隔
+    </string>
+    <string name="settings_category_notifications">通知</string>
+    <string name="settings_notifications_enabled">允许通知</string>
+    <string name="settings_notifications_enabled_description">新文章是否主动通知
+    </string>
+    <string name="settings_notifications_ringtone">铃声</string>
+    <string name="settings_notifications_ringtone_description">提示铃声
+    </string>
+    <string name="settings_notifications_vibrate">震动</string>
+    <string name="settings_notifications_vibrate_description">新文章的震动
+    </string>
+    <string name="settings_category_content_presentation">内容展示</string>
+    <string name="settings_keep_time">保留时间</string>
+    <string name="settings_keep_time_description">超过时间的文章不显示
+    </string>
+    <string name="settings_disable_pictures">禁用图片</string>
+    <string name="settings_disable_pictures_description">不显示和加载图片</string>
+    <string name="settings_fetch_pictures">下载图片</string>
+    <string name="settings_fetch_pictures_description">将图片下载到本机保存
+    </string>
+    <string name="settings_font_size">文本大小</string>
+    <string name="settings_font_size_description">文本大小</string>
+    <string name="settings_refresh_on_open">打开程序时检查更新</string>
+    <string name="settings_refresh_on_open_description">打开程序时检查更新
+    </string>
+    <string name="settings_refresh_wifi_only">只在WIFI下刷新</string>
+    <string name="settings_refresh_wifi_only_description">只在WIFI下刷新
+    </string>
+    <string name="settings_visible_feeds">可见文章</string>
+    <string name="settings_widget_background">背景</string>
+    <string name="settings_widget_background_description">控件背景
+    </string>
+    <string name="all_feeds">所有站点</string>
+    <string name="settings_screen_proxy">代理</string>
+    <string name="settings_category_network">网络</string>
+    <string name="settings_proxy_enabled">打开</string>
+    <string name="settings_proxy_wifi_only">仅WIFI</string>
+    <string name="settings_proxy_wifi_only_description">WIFI下用代理</string>
+    <string name="settings_proxy_host">主机</string>
+    <string name="settings_proxy_port">端口</string>
+    <string name="settings_proxy_type">类型</string>
+    
+    <!-- my addition -->
+    <string name="url_empty">请输入资讯地址</string>
+    <string name="url_not_valid">资讯地址格式不符合要求</string>
+    <string name="new_addition">新加</string>
+    <string name="articles">篇文章</string>
+    <string name="on_loading">正在加载</string>
+    <string name="load_all">开始检查资讯更新</string>
+    <string name="checking">尝试纠正你的地址</string>
+    <string name="rss_source">http://www.ym910.com/client/yminfo/rss.php?key=</string>
+    <string name="no_wifi_difault_false">当前非WIFI网络，默认关闭图片</string>
+    <string name="hiddenRead">您点击了隐藏所有已读文章</string>
+    <string name="refreshAll">您点击了刷新所有资讯源</string>
+    <string name="refreshCurrent">您点击了刷新当前资讯源</string>
+
+    <string-array name="settings_intervals">
+        <item>1 分</item>
+        <item>5 分</item>
+        <item>15 分</item>
+        <item>30 分</item>
+        <item>1 小时</item>
+        <item>2 小时</item>
+        <item>6 小时</item>
+        <item>12 小时</item>
+        <item>1 天</item>
+    </string-array>
+    <string-array name="settings_keep_times">
+        <item>1 天</item>
+        <item>2 天</item>
+        <item>4 天</item>
+        <item>1 周</item>
+        <item>2 周</item>
+        <item>1 月</item>
+        <item>2 月</item>
+        <item>3 月</item>
+        <item>永久</item>
+    </string-array>
+    <string-array name="settings_font_sizes">
+        <item>标准</item>
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+    </string-array>
+</resources>
