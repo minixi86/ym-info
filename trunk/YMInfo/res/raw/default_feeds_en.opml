@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version='1.1'>
+<body>
+
+	<outline title='IT数码创业'>
+		<outline title='36氪 ' type='rss' xmlUrl='http://www.36kr.com/feed' retrieveFullText='false'/>
+		<outline title='易鸣技术' type='rss' xmlUrl='http://www.ym910.com/wp/?feed=rss2' retrieveFullText='false'/>
+		<outline title='极客公园' type='rss' xmlUrl='http://feeds.geekpark.net/' retrieveFullText='false'/>
+	</outline>
+	<outline title='网购优惠'>
+		<outline title='什么值得买' type='rss' xmlUrl='http://www.smzdm.com/feed' retrieveFullText='false'/>
+	</outline>
+	<outline title='艺术与文学'>
+		<outline title='理想生活' type='rss' xmlUrl='http://www.toodaylab.com/feed' retrieveFullText='false'/>
+	</outline>
+	<outline title='欢乐时光'>
+		<outline title='爱稀奇'  type='rss' xmlUrl='http://www.ixiqi.com/feed' retrieveFullText='false'/>
+		<outline title='糗事百科' type='rss' xmlUrl='http://feed.feedsky.com/qiushi' retrieveFullText='false'/>
+	</outline>
+	
+</body>
+</opml>

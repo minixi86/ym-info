@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/item_bar_round_background"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <!-- title -->
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false" />
+
+        <!-- web site including icon -->
+
+        <TextView
+            android:id="@android:id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            android:drawablePadding="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#1122cc"
+            android:textIsSelectable="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="3dp" >
+
+            <!-- abstract -->
+
+            <TextView
+                android:id="@+id/txtabstract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@+id/representImg"
+                android:alpha="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textIsSelectable="false" />
+
+            <!-- representImg -->
+
+            <ImageView
+                android:id="@+id/representImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="3dp" >
+
+            
+            <ImageView android:layout_gravity="center" android:layout_marginRight="3dp" android:src="@drawable/datetime" android:layout_width="wrap_content" android:layout_height="15dp"/>
+            
+            <!-- date time -->
+
+            <TextView
+                android:id="@+id/datetimetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false" />
+
+            <!-- collect -->
+
+            <ImageView
+                android:id="@android:id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dip" />
+
+            <!-- read or not -->
+
+            <CheckBox
+                android:id="@android:id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dip"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+            
+            <ImageView android:visibility="gone" android:id="@+id/today" android:layout_width="wrap_content" android:layout_height="25dp" android:src="@drawable/today"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
