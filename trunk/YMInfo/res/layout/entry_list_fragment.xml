@@ -11,13 +11,22 @@
         android:text="@string/no_entries"
         android:gravity="center" />
 
-    <ListView
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        
+        <RelativeLayout android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:layout_alignParentLeft="true" android:layout_toLeftOf="@+id/searchbtn" android:id="@+id/searchtxt" android:maxLines="1" android:lines="1" android:hint="@string/searchhit" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:focusable="true" android:onClick="beginSearch" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:id="@+id/searchbtn" android:clickable="true" android:layout_width="wrap_content" android:layout_height="32dp" android:src="@drawable/begin_search"/>
+        </RelativeLayout>
+        
+        <ListView
         android:id="@android:id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="fill"
         android:drawSelectorOnTop="false"
         android:cacheColorHint="@android:color/transparent" />
+        
+    </LinearLayout>
     
     <TextView android:visibility="gone" android:gravity="center" android:textColor="@android:color/white" android:background="#000" android:id="@+id/statusbar" android:alpha="0.5" android:text="@string/loading" android:layout_width="match_parent" android:layout_height="wrap_content"/>
     

@@ -182,6 +182,7 @@
     <string name="hiddenRead">您点击了隐藏所有已读文章</string>
     <string name="refreshAll">您点击了刷新所有资讯源</string>
     <string name="refreshCurrent">您点击了刷新当前资讯源</string>
+    <string name="searchhit">输入关键字搜索</string>
 
     <string-array name="settings_intervals">
         <item>1 分</item>

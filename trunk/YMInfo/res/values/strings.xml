@@ -197,7 +197,8 @@
 	<string name="hiddenRead">You clicked hidded all readed articles</string>
     <string name="refreshAll">You clicked refresh all</string>
     <string name="refreshCurrent">You clicked refresh current</string>
-
+	<string name="searchhit">Input keyword</string>
+	    
     <string-array name="settings_intervals">
         <item>1 minute</item>
         <item>5 minutes</item>

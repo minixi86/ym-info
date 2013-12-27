@@ -19,6 +19,9 @@
 
 package net.ym910.yminfo.activity;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import net.ym910.yminfo.Constants;
 import net.ym910.yminfo.MainApplication;
 import net.ym910.yminfo.R;
@@ -41,15 +44,20 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -61,6 +69,7 @@ import android.view.animation.OvershootInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -115,6 +124,8 @@ LoaderManager.LoaderCallbacks<Cursor> {
 	private RefreshEndReceiver refreshEndReceiver;
 
 	private TextView statusBar;
+
+	private EditText searchtxt;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -180,7 +191,18 @@ LoaderManager.LoaderCallbacks<Cursor> {
 			}
 		}
 		statusBar = (TextView)findViewById(R.id.statusbar);
+		searchtxt = (EditText)findViewById(R.id.searchtxt);
 		initMenus();
+	}
+	
+	public void beginSearch(View iv)
+	{
+		String input = searchtxt.getText().toString();
+		if (mEntriesFragment != null)
+		{
+			mEntriesFragment.resetKeyword(input);
+		}
+		
 	}
 	
 	public TextView getStatusBar() {
@@ -428,6 +450,8 @@ LoaderManager.LoaderCallbacks<Cursor> {
 	static final int anicatinoTime = 100;
 
 	private RotateAnimation showRotateAnimation;
+
+	private Drawable begin_search;
 	
 	public void myanimation(View view) {
 		if (showRotateAnimation == null || showRotateAnimation.hasEnded())
