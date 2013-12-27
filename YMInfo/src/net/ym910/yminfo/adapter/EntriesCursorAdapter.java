@@ -55,6 +55,7 @@ import net.ym910.yminfo.provider.FeedData;
 import net.ym910.yminfo.provider.FeedDataContentProvider;
 import net.ym910.yminfo.provider.FeedData.EntryColumns;
 import net.ym910.yminfo.provider.FeedData.FeedColumns;
+import net.ym910.yminfo.utils.GeneralUtil;
 import net.ym910.yminfo.utils.MD5Util;
 import net.ym910.yminfo.utils.PrefUtils;
 import net.ym910.yminfo.utils.UiUtils;
@@ -140,9 +141,12 @@ public class EntriesCursorAdapter extends ResourceCursorAdapter {
 
 	@Override
 	public void bindView(View view, final Context context, Cursor cursor) {
+		String title = cursor.getString(titleColumnPosition);
+		String abstractContent = cursor.getString(abstractColumn);
+		
 		final TextView textView = (TextView) view
 				.findViewById(android.R.id.text1);
-		textView.setText(cursor.getString(titleColumnPosition));
+		textView.setText(title);
 
 		final TextView feedSiteNameView = (TextView) view
 				.findViewById(android.R.id.text2);
@@ -203,7 +207,6 @@ public class EntriesCursorAdapter extends ResourceCursorAdapter {
 				today.setVisibility(View.VISIBLE);
 			}
 		}
-		String abstractContent = cursor.getString(abstractColumn);
 		if (UiUtils.empty(abstractContent)) {
 			abstractContent = cursor.getString(contentColumn);
 		}

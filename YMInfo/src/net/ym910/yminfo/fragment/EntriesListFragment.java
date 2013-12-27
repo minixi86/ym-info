@@ -52,10 +52,12 @@ import net.ym910.yminfo.Constants;
 import net.ym910.yminfo.adapter.EntriesCursorAdapter;
 import net.ym910.yminfo.bean.RefreshBean;
 import net.ym910.yminfo.notify.MenuInfoer;
+import net.ym910.yminfo.provider.FeedData;
 import net.ym910.yminfo.provider.FeedDataContentProvider;
 import net.ym910.yminfo.provider.FeedData.EntryColumns;
 import net.ym910.yminfo.provider.FeedData.FeedColumns;
 import net.ym910.yminfo.service.FetcherService;
+import net.ym910.yminfo.utils.GeneralUtil;
 import net.ym910.yminfo.utils.PrefUtils;
 
 public class EntriesListFragment extends ListFragment implements
@@ -81,6 +83,7 @@ public class EntriesListFragment extends ListFragment implements
 		}
 	};
 	private RefreshBean refreshBean = null;
+	private String keyword = "";
 
 	private class SwipeGestureListener extends SimpleOnGestureListener
 			implements OnTouchListener {
@@ -294,7 +297,6 @@ public class EntriesListFragment extends ListFragment implements
 	public void setData(Uri uri, boolean showFeedInfo) {
 		mUri = uri;
 		mShowFeedInfo = showFeedInfo;
-
 		mEntriesCursorAdapter = new EntriesCursorAdapter(getActivity(), mUri,
 				null, mShowFeedInfo);
 		setListAdapter(mEntriesCursorAdapter);
@@ -303,13 +305,25 @@ public class EntriesListFragment extends ListFragment implements
 
 	@Override
 	public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+		String selection = PrefUtils.getBoolean(PrefUtils.SHOW_READ, true) || EntryColumns.FAVORITES_CONTENT_URI.equals(mUri) ? null : EntryColumns.WHERE_UNREAD;
+		String[] rep = null;
+		if (!GeneralUtil.isEmpty(keyword))
+		{
+			if (selection == null)
+			{
+				selection = "";
+				selection += EntryColumns.WHERE_CONTAINS;
+			} else {
+				selection += Constants.DB_AND  +  EntryColumns.WHERE_CONTAINS;
+			}
+			String likeKey = "%" + keyword + "%";
+			rep = new String[]{likeKey, likeKey};
+		}
 		CursorLoader cursorLoader = new CursorLoader(
 				getActivity(),
 				mUri,
 				null,
-				PrefUtils.getBoolean(PrefUtils.SHOW_READ, true)
-						|| EntryColumns.FAVORITES_CONTENT_URI.equals(mUri) ? null
-						: EntryColumns.WHERE_UNREAD, null, EntryColumns.DATE
+				selection, rep, EntryColumns.DATE
 						+ Constants.DB_DESC);
 		cursorLoader.setUpdateThrottle(Constants.UPDATE_THROTTLE_DELAY);
 		return cursorLoader;
@@ -327,5 +341,14 @@ public class EntriesListFragment extends ListFragment implements
 
 	public void setRefreshActionView(RefreshBean refreshBean) {
 		this.refreshBean = refreshBean;
+	}
+
+	public void resetKeyword(String input) {
+		if (!keyword.equals(input))
+		{
+			this.keyword = input;
+			getLoaderManager().restartLoader(LOADER_ID, null,
+					EntriesListFragment.this);
+		}
 	}
 }

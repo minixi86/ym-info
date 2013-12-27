@@ -193,6 +193,8 @@ public class FeedData {
         public static final String[] PROJECTION_ID = new String[]{EntryColumns._ID};
 
         public static final String WHERE_UNREAD = "(" + EntryColumns.IS_READ + Constants.DB_IS_NULL + Constants.DB_OR + EntryColumns.IS_READ + Constants.DB_IS_FALSE + ')';
+        
+        public static final String WHERE_CONTAINS = "(" + EntryColumns.TITLE + Constants.DB_LIKE + Constants.DB_OR + EntryColumns.ABSTRACT + Constants.DB_LIKE + ')';
 
         public static final String WHERE_NOT_FAVORITE = "(" + EntryColumns.IS_FAVORITE + Constants.DB_IS_NULL + Constants.DB_OR + EntryColumns.IS_FAVORITE + Constants.DB_IS_FALSE + ')';
     }
